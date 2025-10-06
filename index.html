@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spend Analysis Consulting | Transform Procurement Strategy with Data</title>
+    <meta name="description" content="Discover how spend analysis consulting transforms procurement from tactical purchasing to strategic value creation. Interactive demonstrations of the 5 core theses.">
+    
+    <!-- Pico CSS via jsDelivr for cost-efficient global CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Spend Analysis Consulting Demo">
+    <meta property="og:description" content="Interactive demonstration of spend analysis consulting methodology">
+    <meta property="og:type" content="website">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Spend Analysis Consulting Demo",
+        "description": "Interactive demonstration of spend analysis consulting methodology and the 5 core theses"
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Sticky Navigation -->
+    <nav role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <ul>
+                <li><strong>Spend Analysis Demo</strong></li>
+            </ul>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#thesis1">Data Clarity</a></li>
+                <li><a href="#thesis2">Consolidation</a></li>
+                <li><a href="#thesis3">Compliance</a></li>
+                <li><a href="#thesis4">Price Variance</a></li>
+                <li><a href="#thesis5">Working Capital</a></li>
+                <li>
+                    <label>
+                        <input type="checkbox" id="toggleBeforeAfter" role="switch" aria-label="Toggle between before and after scenarios">
+                        After State
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <header id="hero" class="hero">
+            <div class="container">
+                <hgroup>
+                    <h1>Transform Procurement Strategy with Spend Analysis</h1>
+                    <p>Discover the 5 core theses that turn tactical purchasing into strategic value creation. Use the toggle above to see before and after transformations.</p>
+                </hgroup>
+                <div class="hero-cta">
+                    <a href="#overview" role="button" class="primary">See the Methodology</a>
+                    <a href="#ctaContact" role="button" class="secondary">Get Started</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="container">
+                <hgroup>
+                    <h2>What is Spend Analysis?</h2>
+                    <p>Spend analysis is the process of collecting, cleansing, classifying, and analyzing expenditure data to decrease procurement costs and improve efficiency. It transforms procurement from a reactive cost center into a strategic value driver.</p>
+                </hgroup>
+                
+                <div class="grid">
+                    <div class="card">
+                        <h3>The Challenge</h3>
+                        <p>Most organizations struggle with fragmented spend data across multiple systems, making it impossible to identify opportunities or manage supplier relationships strategically.</p>
+                    </div>
+                    <div class="card">
+                        <h3>The Solution</h3>
+                        <p>A systematic approach to consolidate, cleanse, and analyze all spend data, revealing actionable insights that drive measurable results.</p>
+                    </div>
+                    <div class="card">
+                        <h3>The Impact</h3>
+                        <p>Organizations typically achieve 5-15% cost savings and transform procurement into a strategic function that supports business growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thesis 1: Data Clarity Unlocks Value -->
+        <section id="thesis1" class="section thesis-section">
+            <div class="container">
+                <header class="thesis-header">
+                    <hgroup>
+                        <h2>Thesis 1: Data Clarity Unlocks Value</h2>
+                        <p>Fragmented vendor names and inconsistent categories obscure opportunities. Cleansing and classification create a single source of truth that reliably supports action.</p>
+                    </hgroup>
+                </header>
+
+                <div class="thesis-content">
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t1-classification-coverage">70%</span>
+                            <span class="kpi-label">Classification Coverage</span>
+                            <span class="kpi-delta" id="t1-classification-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t1-duplicates">487</span>
+                            <span class="kpi-label">Duplicate Suppliers Detected</span>
+                            <span class="kpi-delta" id="t1-duplicates-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t1-missing-category">$2.3M</span>
+                            <span class="kpi-label">Spend with Missing Category</span>
+                            <span class="kpi-delta" id="t1-missing-delta"></span>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <div class="chart-container">
+                            <h3>Spend by Category (Size = Spend, Color = Classification Confidence)</h3>
+                            <div id="t1-treemap" class="chart" aria-label="Treemap showing spend by category with classification confidence"></div>
+                            <p class="chart-description">Interactive treemap displaying spend categories. Larger rectangles represent higher spend volumes, while color intensity indicates classification confidence.</p>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Data Flow: Business Unit → Category → Supplier</h3>
+                            <div id="t1-sankey" class="chart" aria-label="Sankey diagram showing data flow complexity"></div>
+                            <p class="chart-description">Flow diagram showing how spend moves from business units through categories to suppliers, revealing complexity patterns.</p>
+                        </div>
+                    </div>
+
+                    <div class="thesis-details">
+                        <div class="details-grid">
+                            <div>
+                                <h4>Client Pain Points</h4>
+                                <ul>
+                                    <li>Duplicate and variant supplier names</li>
+                                    <li>Unclassified or "misc" coded spend</li>
+                                    <li>Inconsistent taxonomies across systems</li>
+                                    <li>Manual, Excel-heavy reporting processes</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Consulting Opportunities</h4>
+                                <ul>
+                                    <li>Supplier normalization and hierarchy mapping</li>
+                                    <li>AI-assisted classification to standard taxonomy</li>
+                                    <li>Data pipeline and governance design</li>
+                                    <li>KPI and dashboard standards</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Expected Impact</h4>
+                                <ul>
+                                    <li>Classification coverage: 70% → 98%</li>
+                                    <li>Timeline: 6-8 weeks to completion</li>
+                                    <li>Faster opportunity discovery cycle</li>
+                                    <li>Automated monthly refresh process</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thesis 2: Consolidation Creates Leverage -->
+        <section id="thesis2" class="section thesis-section">
+            <div class="container">
+                <header class="thesis-header">
+                    <hgroup>
+                        <h2>Thesis 2: Consolidation Creates Leverage</h2>
+                        <p>Fragmented spend reduces buying power. Concentrating volume and rationalizing suppliers yields better pricing and service levels.</p>
+                    </hgroup>
+                </header>
+
+                <div class="thesis-content">
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t2-supplier-count">1,247</span>
+                            <span class="kpi-label">Total Suppliers</span>
+                            <span class="kpi-delta" id="t2-supplier-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t2-top20-share">76%</span>
+                            <span class="kpi-label">Top 20 Suppliers Share</span>
+                            <span class="kpi-delta" id="t2-top20-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t2-price-improvement">0%</span>
+                            <span class="kpi-label">Price Improvement</span>
+                            <span class="kpi-delta" id="t2-price-delta"></span>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <div class="chart-container">
+                            <h3>Supplier Spend Distribution (Pareto Analysis)</h3>
+                            <div id="t2-pareto" class="chart" aria-label="Pareto chart showing supplier spend distribution"></div>
+                            <p class="chart-description">Combined bar and line chart showing cumulative spend by supplier, highlighting the 80/20 pattern.</p>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Suppliers per Category</h3>
+                            <div id="t2-suppliers" class="chart" aria-label="Bar chart showing supplier count by category"></div>
+                            <p class="chart-description">Comparison of supplier counts across categories, with reduction percentages after consolidation.</p>
+                        </div>
+                    </div>
+
+                    <div class="thesis-details">
+                        <div class="details-grid">
+                            <div>
+                                <h4>Client Pain Points</h4>
+                                <ul>
+                                    <li>Too many suppliers per category</li>
+                                    <li>Missed volume breaks and rebates</li>
+                                    <li>Inconsistent service level agreements</li>
+                                    <li>Administrative burden of managing relationships</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Consulting Opportunities</h4>
+                                <ul>
+                                    <li>Category strategies and wave planning</li>
+                                    <li>Supplier rationalization business cases</li>
+                                    <li>Negotiation support and playbooks</li>
+                                    <li>Risk assessment and mitigation</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Expected Impact</h4>
+                                <ul>
+                                    <li>30-40% supplier reduction in targeted categories</li>
+                                    <li>3-8% unit price improvement</li>
+                                    <li>Long tail trimmed by 45%</li>
+                                    <li>Enhanced negotiating leverage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thesis 3: Compliance Stops Value Leakage -->
+        <section id="thesis3" class="section thesis-section">
+            <div class="container">
+                <header class="thesis-header">
+                    <hgroup>
+                        <h2>Thesis 3: Compliance Stops Value Leakage</h2>
+                        <p>Off-contract buys and policy bypass drive avoidable costs. Visibility enables targeted controls without adding friction.</p>
+                    </hgroup>
+                </header>
+
+                <div class="thesis-content">
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t3-maverick-spend">22%</span>
+                            <span class="kpi-label">Maverick Spend</span>
+                            <span class="kpi-delta" id="t3-maverick-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t3-contract-coverage">64%</span>
+                            <span class="kpi-label">Contract Coverage</span>
+                            <span class="kpi-delta" id="t3-contract-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t3-exceptions-rate">18%</span>
+                            <span class="kpi-label">Invoice Exception Rate</span>
+                            <span class="kpi-delta" id="t3-exceptions-delta"></span>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <div class="chart-container">
+                            <h3>Contract vs Off-Contract Spend by Category</h3>
+                            <div id="t3-complianceStack" class="chart" aria-label="Stacked bar chart showing contract compliance by category"></div>
+                            <p class="chart-description">Stacked bars showing on-contract versus off-contract spend across different categories.</p>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Maverick Spend Heatmap by Business Unit</h3>
+                            <div id="t3-heatmap" class="chart" aria-label="Heatmap showing maverick spend patterns"></div>
+                            <p class="chart-description">Heat map revealing maverick spend patterns across business units and categories.</p>
+                        </div>
+                    </div>
+
+                    <div class="thesis-details">
+                        <div class="details-grid">
+                            <div>
+                                <h4>Client Pain Points</h4>
+                                <ul>
+                                    <li>Maverick spend and shadow IT purchases</li>
+                                    <li>Invoice exceptions and price mismatches</li>
+                                    <li>Low catalog adoption rates</li>
+                                    <li>Policy violations going undetected</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Consulting Opportunities</h4>
+                                <ul>
+                                    <li>Contract coverage analysis and catalog design</li>
+                                    <li>Policy tuning and guided buying workflows</li>
+                                    <li>Exception analytics and supplier enablement</li>
+                                    <li>Automated compliance monitoring</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Expected Impact</h4>
+                                <ul>
+                                    <li>Maverick spend reduced to single digits</li>
+                                    <li>Exception rates cut by 60%</li>
+                                    <li>Contract coverage above 90%</li>
+                                    <li>Policy compliance transparency</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thesis 4: Price Variance Engineered Down -->
+        <section id="thesis4" class="section thesis-section">
+            <div class="container">
+                <header class="thesis-header">
+                    <hgroup>
+                        <h2>Thesis 4: Price Variance Engineered Down</h2>
+                        <p>Like-for-like items often carry unjustified price spread. Standardizing specs and supplier pricing reduces variance.</p>
+                    </hgroup>
+                </header>
+
+                <div class="thesis-content">
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t4-price-variance">18%</span>
+                            <span class="kpi-label">Price Variance</span>
+                            <span class="kpi-delta" id="t4-variance-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t4-above-benchmark">342</span>
+                            <span class="kpi-label">Items Above Benchmark</span>
+                            <span class="kpi-delta" id="t4-benchmark-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t4-standardization">67%</span>
+                            <span class="kpi-label">Standardization Coverage</span>
+                            <span class="kpi-delta" id="t4-standard-delta"></span>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <div class="chart-container">
+                            <h3>Unit Price Distribution for Common Items</h3>
+                            <div id="t4-boxplot" class="chart" aria-label="Box plot showing price variance reduction"></div>
+                            <p class="chart-description">Box plots showing unit price distributions across suppliers for common specification items.</p>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Price Stability Over Time</h3>
+                            <div id="t4-controlChart" class="chart" aria-label="Control chart showing price stabilization"></div>
+                            <p class="chart-description">Control chart showing unit price trends with target bands, demonstrating stabilization after intervention.</p>
+                        </div>
+                    </div>
+
+                    <div class="thesis-details">
+                        <div class="details-grid">
+                            <div>
+                                <h4>Client Pain Points</h4>
+                                <ul>
+                                    <li>Inconsistent product specifications</li>
+                                    <li>Multiple price lists for identical items</li>
+                                    <li>No should-cost benchmarks</li>
+                                    <li>Lack of price transparency</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Consulting Opportunities</h4>
+                                <ul>
+                                    <li>Specification standardization programs</li>
+                                    <li>Should-cost modeling and benchmarking</li>
+                                    <li>Price harmonization and governance</li>
+                                    <li>Cross-business alignment initiatives</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Expected Impact</h4>
+                                <ul>
+                                    <li>Variance reduced from 18% to 6%</li>
+                                    <li>Sustainable pricing guardrails</li>
+                                    <li>Standardized specifications</li>
+                                    <li>Automated price monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thesis 5: Working Capital Strategic Lever -->
+        <section id="thesis5" class="section thesis-section">
+            <div class="container">
+                <header class="thesis-header">
+                    <hgroup>
+                        <h2>Thesis 5: Working Capital is a Strategic Lever</h2>
+                        <p>Payment terms and discount programs shape cash flow. Structured terms optimization improves DPO while preserving supplier health.</p>
+                    </hgroup>
+                </header>
+
+                <div class="thesis-content">
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t5-avg-terms">42</span>
+                            <span class="kpi-label">Average Payment Terms (Days)</span>
+                            <span class="kpi-delta" id="t5-terms-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t5-discount-capture">23%</span>
+                            <span class="kpi-label">Early Pay Discount Capture</span>
+                            <span class="kpi-delta" id="t5-discount-delta"></span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value" id="t5-dpo-trend">45</span>
+                            <span class="kpi-label">Days Payable Outstanding</span>
+                            <span class="kpi-delta" id="t5-dpo-delta"></span>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <div class="chart-container">
+                            <h3>Payment Terms Distribution</h3>
+                            <div id="t5-termsHistogram" class="chart" aria-label="Histogram of payment terms distribution"></div>
+                            <p class="chart-description">Distribution of payment terms across suppliers, showing shift toward extended terms.</p>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Working Capital Improvement Components</h3>
+                            <div id="t5-waterfall" class="chart" aria-label="Waterfall chart showing working capital improvements"></div>
+                            <p class="chart-description">Waterfall chart breaking down working capital improvements from terms extension, discount capture, and penalty reduction.</p>
+                        </div>
+                    </div>
+
+                    <div class="thesis-details">
+                        <div class="details-grid">
+                            <div>
+                                <h4>Client Pain Points</h4>
+                                <ul>
+                                    <li>Short payment terms and missed discounts</li>
+                                    <li>Ad hoc payment term negotiations</li>
+                                    <li>Supplier pushback concerns</li>
+                                    <li>Poor cash flow visibility</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Consulting Opportunities</h4>
+                                <ul>
+                                    <li>Terms modeling and supplier segmentation</li>
+                                    <li>Early pay and dynamic discount programs</li>
+                                    <li>AP workflow tuning and compliance</li>
+                                    <li>Supplier relationship risk management</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Expected Impact</h4>
+                                <ul>
+                                    <li>DPO improvement of 6-12 days</li>
+                                    <li>Discount capture rate to 65%</li>
+                                    <li>Measured supplier risk approach</li>
+                                    <li>Sustainable cash flow optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="section cta-section">
+            <div class="container">
+                <hgroup>
+                    <h2>Ready to Transform Your Procurement Strategy?</h2>
+                    <p>See how spend analysis can unlock hidden value in your organization. Download our methodology overview or get in touch to discuss your specific challenges.</p>
+                </hgroup>
+                
+                <div class="cta-actions">
+                    <a href="assets/docs/spend-analysis-methodology.pdf" role="button" class="primary" id="ctaDownload" download>
+                        Download One-Pager
+                    </a>
+                    <a href="mailto:hello@spendanalysis.example?subject=Spend%20Analysis%20Consulting%20Inquiry" role="button" class="secondary" id="ctaContact">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <small>
+                <strong>Demonstration purposes only.</strong> All data shown is synthetic and generated for illustration. 
+                Results may vary based on organization size, industry, and current procurement maturity.
+            </small>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+</html>

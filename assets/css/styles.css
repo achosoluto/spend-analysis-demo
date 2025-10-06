@@ -1,0 +1,446 @@
+/* Spend Analysis Demo - Custom Styles */
+/* Building on Pico CSS with professional procurement consulting brand */
+
+:root {
+  /* Professional color palette */
+  --primary-navy: #0d1b2a;
+  --accent-green: #2ca58d;
+  --accent-amber: #f59e0b;
+  --neutral-light: #e9ecef;
+  --neutral-dark: #33415c;
+  --text-primary: var(--primary-navy);
+  --text-secondary: var(--neutral-dark);
+  --background: #ffffff;
+  --background-alt: #f8f9fa;
+  
+  /* Chart colors */
+  --chart-before: var(--accent-amber);
+  --chart-after: var(--accent-green);
+  --chart-neutral: #6c757d;
+  --chart-background: var(--neutral-light);
+  
+  /* Accessibility improvements */
+  --focus-color: var(--accent-green);
+  --focus-width: 3px;
+}
+
+/* Typography - System font stack for performance */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-navy);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+/* Navigation enhancements */
+nav {
+  background: var(--background);
+  border-bottom: 1px solid var(--neutral-light);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(13, 27, 42, 0.1);
+}
+
+nav label input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Hero section styling */
+.hero {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--neutral-dark) 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Section styling */
+.section {
+  padding: 4rem 0;
+}
+
+.section:nth-child(even) {
+  background: var(--background-alt);
+}
+
+.thesis-section {
+  border-top: 4px solid var(--accent-green);
+}
+
+.thesis-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.thesis-header h2 {
+  color: var(--primary-navy);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Card styling */
+.card {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
+  height: 100%;
+}
+
+.card h3 {
+  color: var(--primary-navy);
+  margin-bottom: 1rem;
+}
+
+/* KPI cards */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.kpi-card {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
+  border-left: 4px solid var(--accent-green);
+}
+
+.kpi-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.kpi-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-delta {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  background: var(--neutral-light);
+}
+
+.kpi-delta.positive {
+  background: rgba(44, 165, 141, 0.1);
+  color: var(--accent-green);
+}
+
+.kpi-delta.negative {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-amber);
+}
+
+.kpi-delta:before {
+  content: '';
+  margin-right: 0.25rem;
+}
+
+.kpi-delta.positive:before {
+  content: '↗';
+}
+
+.kpi-delta.negative:before {
+  content: '↘';
+}
+
+/* Charts styling */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.chart-container {
+  background: var(--background);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
+}
+
+.chart-container h3 {
+  color: var(--primary-navy);
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--neutral-light);
+  padding-bottom: 0.5rem;
+}
+
+.chart {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.chart-description {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Details grid */
+.thesis-details {
+  margin-top: 3rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.details-grid div {
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
+}
+
+.details-grid h4 {
+  color: var(--primary-navy);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-green);
+}
+
+.details-grid ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.details-grid li {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+/* Call to action section */
+.cta-section {
+  background: var(--primary-navy);
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2,
+.cta-section p {
+  color: white;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Button enhancements */
+[role="button"].primary {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+[role="button"].primary:hover {
+  background: #228b6b;
+  border-color: #228b6b;
+}
+
+[role="button"].secondary {
+  background: transparent;
+  border: 2px solid var(--accent-green);
+  color: var(--accent-green);
+}
+
+[role="button"].secondary:hover {
+  background: var(--accent-green);
+  color: white;
+}
+
+.cta-section [role="button"].secondary {
+  color: white;
+  border-color: white;
+}
+
+.cta-section [role="button"].secondary:hover {
+  background: white;
+  color: var(--primary-navy);
+}
+
+/* Focus states for accessibility */
+button:focus,
+[role="button"]:focus,
+input:focus,
+select:focus {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 var(--focus-width) var(--focus-color);
+}
+
+/* Loading states */
+.chart.loading {
+  background: var(--neutral-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.chart.loading:after {
+  content: "Loading chart...";
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    padding: 1rem;
+  }
+  
+  .chart {
+    height: 250px;
+  }
+  
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+  }
+  
+  nav li {
+    margin: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .kpi-value {
+    font-size: 2rem;
+  }
+  
+  .chart {
+    height: 200px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-navy: #000000;
+    --accent-green: #006600;
+    --accent-amber: #cc6600;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+  }
+  
+  .card,
+  .kpi-card,
+  .chart-container,
+  .details-grid div {
+    border: 2px solid var(--text-primary);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav,
+  .hero-cta,
+  .cta-section {
+    display: none;
+  }
+  
+  .section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .chart-container {
+    break-inside: avoid;
+  }
+}
